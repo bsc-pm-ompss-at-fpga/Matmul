@@ -1,6 +1,6 @@
 /*
-* Copyright (c) 2020, Barcelona Supercomputing Center
-*                     Centro Nacional de Supercomputacion
+* Copyright (c) 2020-2022, Barcelona Supercomputing Center
+*                          Centro Nacional de Supercomputacion
 *
 * This program is free software: you can redistribute it and/or modify  
 * it under the terms of the GNU General Public License as published by  
@@ -106,7 +106,7 @@ unsigned int matmulCheck(const unsigned int check, const elem_t* c, const unsign
    return check_ok;
 }
 
-#pragma omp target device(fpga) num_instances(1) no_copy_deps copy_in([BSIZE*BSIZE]a, [BSIZE*BSIZE]b) copy_inout([BSIZE*BSIZE]c)
+#pragma omp target device(fpga) num_instances(MBLOCK_NUM_ACCS) no_copy_deps copy_in([BSIZE*BSIZE]a, [BSIZE*BSIZE]b) copy_inout([BSIZE*BSIZE]c)
 #pragma omp task inout([BSIZE*BSIZE]c)
 void matmulBlock(const elem_t *a, const elem_t *b, elem_t *c)
 {

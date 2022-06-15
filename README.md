@@ -1,8 +1,8 @@
 # Matmul (FPGA devices version)
 
-**Name**: Matrix Multiplication Kernel  
-**Contact Person**: OmpSs@FPGA Team, ompss-fpga-support@bsc.es  
-**License Agreement**: GPL 3.0  
+**Name**: Matrix Multiplication Kernel
+**Contact Person**: OmpSs@FPGA Team, ompss-fpga-support@bsc.es
+**License Agreement**: GPL 3.0
 **Platform**: OmpSs@FPGA
 
 
